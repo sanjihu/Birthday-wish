@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday 🎉</title>
+  <style>
+    body {
+      text-align: center;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 3em;
+      animation: pop 1s infinite alternate;
+    }
+    @keyframes pop {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      margin-top: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff6f61;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Happy Birthday, My Friend! 🎂</h1>
+  <p>Wishing you lots of joy, love, and cake today! 🎉</p>
+  <button onclick="launchConfetti()">Click for Surprise 🎊</button>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    function launchConfetti() {
+      confetti({
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+    }
+  </script>
+</body>
+</html>
